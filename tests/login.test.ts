@@ -1,4 +1,4 @@
-import{chromium, test }from "@playwright/test"
+import{chromium, expect, test }from "@playwright/test"
 
 
 test("login",async () => {
@@ -15,6 +15,8 @@ test("login",async () => {
     await page.fill("//input[@name='email']","karnewar.sahil@gmail.com")
     await page.fill("//input[@name='password']","test@123")
     await page.click("//input[@value='Login']")
+    //var tx = page.locator("//h2[contains(text(),'My Account')]").textContent();
+    await expect(page.locator("//h2[contains(text(),'My Account')]")).toHaveText("My Account")
 
     await page.waitForTimeout(5000)
 })
