@@ -3,7 +3,7 @@ const config:PlaywrightTestConfig = {
 
   //testMatch:["tests/login.test.ts"]
 
-  testMatch:["tests/openMRS.register.ts"]
+  testMatch:["tests/checkbox.test.ts"]
 };
 
 export default config;

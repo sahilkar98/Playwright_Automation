@@ -8,34 +8,35 @@ test("register",async ({}) => {
     const page = await context.newPage();
 
     await page.goto('https://demo.openmrs.org/openmrs/login.htm');
-    await page.fill("//input[@name='username']", "Admin")
-    await page.fill("//input[@name='password']", "Admin123")
-    await page.click("//li[text() = 'Outpatient Clinic']");
-    await page.click("//input[@id='loginButton']");
+    await page.fill("input#username", "Admin")
+    await page.fill("input#password", "Admin123")
+    await page.click("li[id='Outpatient Clinic']");
+    await page.click("input#loginButton");
     await page.waitForTimeout(3000);
-    await page.click("//a/i[@class='icon-user']");
-    await page.fill("//input[@name='givenName']", "abc");
-    await page.fill("//input[@name='familyName']", "test");
-    await page.click("//button[@id='next-button']");
+    await page.click("a#referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
+    await page.fill("input[name='givenName']", "abc");
+    await page.fill("input[name='familyName']", "test");
+    await page.click("button#next-button");
 
-    await page.locator("//select[@name='gender']").selectOption("M");
-    await page.click("//button[@id='next-button']");
+    await page.locator("select#gender-field").selectOption("M");
+    await page.click("button#next-button");
     
-    await page.fill("//input[@name='birthdateDay']","16");
+    await page.fill("input#birthdateDay-field","16");
+    await page.locator("select#birthdateMonth-field").selectOption("3");
+    await page.fill("input#birthdateYear-field", "1998");
+    await page.click("button#next-button");
 
-    await page.locator("//select[@name='birthdateMonth']").selectOption("3");
-    await page.fill("//input[@name='birthdateYear']", "1998");
-    await page.click("//button[@id='next-button']");
-    await page.fill("//input[@name='address1']", "svvsvsvdsvs");
-    await page.click("//button[@id='next-button']");
+    await page.fill("input#address1", "svvsvsvdsvs");
+    await page.click("button#next-button");
 
-    await page.fill("//input[@name='phoneNumber']","9876543219")
-    await page.click("//button[@id='next-button']");
-    await page.locator("//select[@name='relationship_type']").selectOption("Doctor");
-    await page.fill("//input[@placeholder='Person Name']","abc");
-    await page.click("//button[@id='next-button']");
+    await page.fill("input[name='phoneNumber']","9876543219")
+    await page.click("button#next-button");
 
-    await page.click("//input[@type='submit']");
+    await page.locator("select#relationship_type").selectOption("Doctor");
+    await page.fill("input[placeholder='Person Name']","abc");
+    await page.click("button#next-button");
+
+    await page.click("input#submit");
     
 
     await page.waitForTimeout(3000);
