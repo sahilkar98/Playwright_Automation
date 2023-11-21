@@ -19,4 +19,10 @@ test("login",async () => {
     await expect(page.locator("h2:has-text('My Account')")).toHaveText("My Account")
 
     await page.waitForTimeout(5000)
+
+    const newContext = await browser.newContext();
+    const newPage = await newContext.newPage();
+
+    await newPage.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
+    await page.waitForTimeout(5000)
 })
