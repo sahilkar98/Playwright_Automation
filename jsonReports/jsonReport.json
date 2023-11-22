@@ -47,7 +47,7 @@
         "testDir": "C:/Users/Minfy/OneDrive - MINFY TECHNOLOGIES PRIVATE LIMITED/Documents/Playwright_Automation",
         "testIgnore": [],
         "testMatch": [
-          "tests/frames.test.ts"
+          "pomtest/registerandlogin.test.ts"
         ],
         "timeout": 30000
       }
@@ -60,13 +60,13 @@
   },
   "suites": [
     {
-      "title": "tests\\frames.test.ts",
-      "file": "tests/frames.test.ts",
+      "title": "pomtest\\registerandlogin.test.ts",
+      "file": "pomtest/registerandlogin.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Interact with frames",
+          "title": "Register Test_01",
           "ok": true,
           "tags": [],
           "tests": [
@@ -80,25 +80,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 8519,
+                  "duration": 23150,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "No. of Frames22\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-11-21T13:31:56.219Z",
+                  "startTime": "2023-11-22T15:08:27.429Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "ee77907c2abffffa1fe6-0cf2fd3824902149f18b",
-          "file": "tests/frames.test.ts",
-          "line": 3,
+          "id": "6b895cf221e875539327-46ce96509f359e48e945",
+          "file": "pomtest/registerandlogin.test.ts",
+          "line": 9,
           "column": 5
         }
       ]
@@ -106,7 +102,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-21T13:31:55.332Z",
-    "duration": 10416.318
+    "startTime": "2023-11-22T15:08:10.218Z",
+    "duration": 42378.404
   }
 }

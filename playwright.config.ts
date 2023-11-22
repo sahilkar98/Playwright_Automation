@@ -3,8 +3,9 @@ import { on } from "node:events";
 import { dot } from "node:test/reporters";
 const config:PlaywrightTestConfig = {
 
-  testMatch:["tests/frames.test.ts"],
+  testMatch:["pomtest/registerandlogin.test.ts"],
   use:{
+    baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
     headless: false,
     screenshot: "only-on-failure",
     video:"retain-on-failure"
