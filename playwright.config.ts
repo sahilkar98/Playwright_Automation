@@ -3,12 +3,12 @@ import { on } from "node:events";
 import { dot } from "node:test/reporters";
 const config:PlaywrightTestConfig = {
 
-  testMatch:["pomtest/registerandlogin.test.ts"],
+  //testMatch:["tests/browserContext.spec.ts"],
   use:{
-    baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
+    baseURL: 'https://www.flipkart.com/',
     headless: false,
     screenshot: "only-on-failure",
-    video:"retain-on-failure"
+    video:"retain-on-failure",
   },
   retries:0,
   reporter:[["dot"], ["json", {
